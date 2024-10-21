@@ -11,7 +11,7 @@ public class KonversiUang {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Masukkan jumlah Rupiah (IDR): ");
-        double amountInIDR = scanner.nextDouble();
+        double amountInUang = scanner.nextDouble();
 
         System.out.println("Pilih mata uang tujuan: ");
         System.out.println("1. Dolar AS (USD)");
@@ -22,16 +22,16 @@ public class KonversiUang {
         double convertedAmount;
         switch (choice) {
             case 1:
-                convertedAmount = amountInIDR * rateToUSD;
-                System.out.printf("%.2f IDR = %.2f USD\n", amountInIDR, convertedAmount);
+                convertedAmount = amountInUang * rateToUSD;
+                System.out.printf("%.2f IDR = %.2f USD\n", amountInUang, convertedAmount);
                 break;
             case 2:
-                convertedAmount = amountInIDR * rateToEUR;
-                System.out.printf("%.2f IDR = %.2f EUR\n", amountInIDR, convertedAmount);
+                convertedAmount = amountInUang * rateToEUR;
+                System.out.printf("%.2f IDR = %.2f EUR\n", amountInUang, convertedAmount);
                 break;
             case 3:
-                convertedAmount = amountInIDR * rateToJPY;
-                System.out.printf("%.2f IDR = %.2f JPY\n", amountInIDR, convertedAmount);
+                convertedAmount = amountInUang * rateToJPY;
+                System.out.printf("%.2f IDR = %.2f JPY\n", amountInUang, convertedAmount);
                 break;
             default:
                 System.out.println("Pilihan tidak valid.");
